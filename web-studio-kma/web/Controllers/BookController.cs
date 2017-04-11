@@ -5,7 +5,6 @@ using System.Web;
 using System.Web.Mvc;
 using System.Data.Entity;
 
-using web.model;
 using web_studio.dao;
 using web_studio.model;
 using web_studio.web.Models;
@@ -23,7 +22,6 @@ namespace web_studio.web.Controllers
                 //and optionally re-seed the database with data only if the model has changed since the database was created.
                 //This implementation require you to use the type of the Database Context because it’s a generic class.
                 Database.SetInitializer(new DropCreateDatabaseIfModelChanges<BookEntityContext>());
-                Database.SetInitializer(new DropCreateDatabaseIfModelChanges<UsersEntityContext>());
 
                 return View();
             }
@@ -80,7 +78,6 @@ namespace web_studio.web.Controllers
                         context.SaveChanges();
                     }
                 }
-
 
             }
             catch (Exception)
