@@ -10,6 +10,13 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using web.Models;
 
+using System.Data.Entity;
+
+using web_studio.dao;
+using web.model;
+using web_studio.model;
+using web_studio.web.Models;
+
 namespace web.Controllers
 {
     [Authorize]
@@ -155,7 +162,16 @@ namespace web.Controllers
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
-                    await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);
+                    using (UsersEntityContext context = new UsersEntityContext())
+                    {
+                        context.Users.Add(new web.model.User()
+                        {
+                            Nick = model.Email,
+                            Password = model.Password
+                        });
+                        context.SaveChanges();
+                    }
+                        await SignInManager.SignInAsync(user, isPersistent: false, rememberBrowser: false);
                     
                     // For more information on how to enable account confirmation and password reset please visit http://go.microsoft.com/fwlink/?LinkID=320771
                     // Send an email with this link
