@@ -3,6 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Data.Entity;
+
+using web_studio.dao;
+using web.model;
+using web_studio.model;
+using web_studio.web.Models;
 
 namespace web.Controllers
 {
@@ -10,12 +16,16 @@ namespace web.Controllers
     {
         public ActionResult Index()
         {
+            Database.SetInitializer(new DropCreateDatabaseIfModelChanges<UsersEntityContext>());
+            
             return View();
         }
 
-        public ActionResult About()
+        //
+        // GET: /Studio/
+        public ActionResult Studio()
         {
-            ViewBag.Message = "Your application description page.";
+            
 
             return View();
         }
