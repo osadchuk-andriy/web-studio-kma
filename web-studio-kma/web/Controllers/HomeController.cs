@@ -21,9 +21,11 @@ namespace web.Controllers
             return View();
         }
 
-        public ActionResult About()
+        //
+        // GET: /Studio/
+        public ActionResult Studio()
         {
-            ViewBag.Message = "Your application description page.";
+            
 
             return View();
         }

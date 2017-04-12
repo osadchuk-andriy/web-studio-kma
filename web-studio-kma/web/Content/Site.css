@@ -22,3 +22,53 @@ select,
 textarea {
     max-width: 280px;
 }
+
+@font-face {
+    font-family: "Oswald"; 
+    src: url(fonts/Oswald-Regular.ttf); 
+   }
+
+body{
+    background: #fff;
+    
+}
+
+.container2{
+    margin-top: 50px;
+	color: #EEF4F8;
+}
+
+.col-md-4{
+    background: #465a65;
+    border: none;
+    border-style: solid;
+    border-color: #03A9F5;
+    padding: 0;
+    height: 300px;
+    border-radius: 5px;
+}
+
+.img{
+    display: block;
+    height: 180px;
+    margin: 30px auto;
+}
+
+.button{
+    background: #02A8F4;
+    color: #EEF4F8;
+    border-style: none;
+    font-family: 'Oswald', sans-serif;
+    display: block;
+    margin: auto;
+    padding: 10px 30px;
+    border-radius: 2px;
+}
+
+.button:hover{
+    background: blue;
+}
+
+a:hover{
+    text-decoration: none;
+}
