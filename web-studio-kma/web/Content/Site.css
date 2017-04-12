@@ -15,7 +15,24 @@
 .dl-horizontal dt {
     white-space: normal;
 }
-
+.block {   
+    position: relative;
+    width: auto;
+    
+    margin-bottom: 20px;
+    margin-top: 20px;
+    
+    border: 1px solid black;
+    border-radius: 3px;
+    box-shadow: 1px 2px 3px 1px gray;
+    
+    position: relative;
+	overflow:  hidden;
+ 
+	text-align: center;
+    cursor: pointer;
+	opacity: 0.95;
+}
 /* Set width on the form input elements since they're 100% wide by default */
 input,
 select,

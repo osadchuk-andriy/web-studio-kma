@@ -162,6 +162,7 @@
     <Compile Include="Controllers\BookController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\UserPageController.cs" />
     <Compile Include="dao\BookEntityContext.cs" />
     <Compile Include="dao\UsersEntityContext.cs" />
     <Compile Include="Global.asax.cs">
@@ -244,6 +245,7 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Book\Index.cshtml" />
     <Content Include="Views\Book\_BookDetailView.cshtml" />
+    <Content Include="Views\UserPage\UserPage.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
